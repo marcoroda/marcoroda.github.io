@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+{{ content }}
+{% assign contentwonl = content | strip_newlines %} {% unless contentwonl == ""  %} <br /> {% endunless %}
+<!-- add line break if there is any content -->
+
+{%- if site.tutos.size > 0 -%}
+<ul>
+    {%- for tuto in site.tutos -%}
+    <li>
+        {%- assign date_format = "%d-%m-%y" -%}
+        [ {{ tuto.date | date: date_format }} ] <a href="{{ tuto.url | relative_url }}">{{ tuto.title | escape }}</a>
+    </li>
+    {%- endfor -%}
+</ul>
+{%- endif -%}

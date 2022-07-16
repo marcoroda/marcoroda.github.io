@@ -1,1 +1,56 @@
-theme: jekyll-theme-slate
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: marcodevs
+email: marcoroda20@gmail.com
+description: Hi Makers, this is my website.
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://marcoroda.github.io/marcorodadevs"
+github_username: marcoroda
+style: dark
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+header_pages:
+  - index.md
+  - projects.md
+  - tutos.md
+  - about.md
+  - contact.md
+
+markdown: kramdown
+
+# Custom variables
+owner : "Marco Roda"
+year  : "2020"
+
+footer: '<a href="../../../../../assets/CV_MarcoRoda.pdf" target="_blank">CV</a> <a href="https://github.com/marcoroda" target="_blank">GitHub</a>'
+
+
+# Build settings
+# comment "remote_theme" and uncomment "theme" if build locally
+
+# theme: jekyll-theme-console
+remote_theme: marcoroda/marcoroda.github.io
+
+collections:
+  tutos:
+    output: true
+  
+
+# Set this to a github repository to be used to host comments.
+github_comments_repository : marcoroda/marcorodadevs-comments
